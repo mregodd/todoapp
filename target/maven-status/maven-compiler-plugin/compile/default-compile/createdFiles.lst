@@ -1,0 +1,6 @@
+com\example\todo\app\IToDoItemRepository.class
+com\example\todo\app\ToDoItemController.class
+com\example\todo\app\ToDoAppApplication.class
+com\example\todo\app\GraphQLController.class
+com\example\todo\app\ToDoItem.class
+com\example\todo\app\ToDoItemService.class
