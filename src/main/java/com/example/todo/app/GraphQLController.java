@@ -20,13 +20,13 @@ public class GraphQLController {
     }
 
     @MutationMapping
-    ToDoItem create(@Argument String title, @Argument String description, @Argument boolean done) {
-        return toDoItemService.create(new ToDoItem(title, description, done));
+    ToDoItem create(@Argument String title,@Argument boolean done) {
+        return toDoItemService.create(new ToDoItem(title,done));
     }
 
     @MutationMapping
-    ToDoItem update(@Argument Long id, @Argument String title, @Argument String description, @Argument boolean done) {
-        return toDoItemService.update(new ToDoItem(id, title, description, done));
+    ToDoItem update(@Argument Long id, @Argument String title, @Argument boolean done) {
+        return toDoItemService.update(new ToDoItem(id, title, done));
     }
 
     @MutationMapping

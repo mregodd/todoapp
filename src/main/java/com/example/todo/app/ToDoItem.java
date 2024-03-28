@@ -15,16 +15,13 @@ import lombok.Setter;
 public class ToDoItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonIgnore
     private Long id;
 
     private String title;
-    private String description;
     private boolean done;
 
-    public ToDoItem(String title, String description, boolean done) {
+    public ToDoItem(String title, boolean done) {
         this.title = title;
-        this.description = description;
         this.done = done;
     }
 }

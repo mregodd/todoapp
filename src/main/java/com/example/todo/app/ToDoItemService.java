@@ -18,7 +18,6 @@ public class ToDoItemService {
     public ToDoItem create(ToDoItem toDoItem) {
         ToDoItem newToDoItem = new ToDoItem();
         newToDoItem.setTitle(toDoItem.getTitle());
-        newToDoItem.setDescription(toDoItem.getDescription());
         newToDoItem.setDone(toDoItem.isDone());
 
         return toDoItemRepository.save(newToDoItem);
@@ -30,7 +29,6 @@ public class ToDoItemService {
             return null;
         }
         existingToDoItem.setTitle(toDoItem.getTitle());
-        existingToDoItem.setDescription(toDoItem.getDescription());
         existingToDoItem.setDone(toDoItem.isDone());
 
         return toDoItemRepository.save(existingToDoItem);
