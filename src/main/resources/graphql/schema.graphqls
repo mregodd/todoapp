@@ -1,0 +1,16 @@
+type TodoItem {
+    id: ID!
+    title: String!
+    description: String!
+    done: Boolean!
+}
+
+type Query {
+    findAll: [TodoItem!]!
+}
+
+type Mutation {
+    create(title: String!, description: String!, done: Boolean!): TodoItem!
+    update(id: ID!, title: String, description: String, done: Boolean): TodoItem!
+    delete(id: ID!): String
+}
