@@ -1,5 +1,7 @@
 com\example\todo\app\IToDoItemRepository.class
 com\example\todo\app\ToDoItemController.class
+com\example\todo\app\CorsConfig$1.class
+com\example\todo\app\CorsConfig.class
 com\example\todo\app\ToDoAppApplication.class
 com\example\todo\app\GraphQLController.class
 com\example\todo\app\ToDoItem.class
