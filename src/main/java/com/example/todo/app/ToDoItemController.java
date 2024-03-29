@@ -24,7 +24,7 @@ public class ToDoItemController {
     }
 
     @PutMapping("/update")
-    public ToDoItem update(ToDoItem toDoItem) {
+    public ToDoItem update(@RequestBody ToDoItem toDoItem) {
         return toDoItemService.update(toDoItem);
     }
 

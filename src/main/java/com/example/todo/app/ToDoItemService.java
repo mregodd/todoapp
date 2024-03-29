@@ -23,13 +23,20 @@ public class ToDoItemService {
         return toDoItemRepository.save(newToDoItem);
     }
     public ToDoItem update(ToDoItem toDoItem) {
-        Long id = toDoItem.getId();
-        ToDoItem existingToDoItem = toDoItemRepository.findById(id).orElse(null);
-        if (existingToDoItem == null) {
-            return null;
+        System.out.println(toDoItem.getId());
+        if (toDoItem == null || toDoItem.getId() == null) {
+            throw new IllegalArgumentException("ToDoItem or its id cannot be null");
         }
+
+
+        Long id = toDoItem.getId();
+
+        ToDoItem existingToDoItem = toDoItemRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("ToDoItem with id " + id + " not found"));
+
         existingToDoItem.setTitle(toDoItem.getTitle());
         existingToDoItem.setDone(toDoItem.isDone());
+
 
         return toDoItemRepository.save(existingToDoItem);
     }
